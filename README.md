@@ -4,6 +4,7 @@ This project is used to detect the object, draw the contours and determine the a
 ## Prerequisites
 OpenCV needs to be installed before executing the project.
 You can use this link to install OpenCV.
+<br>
 [OpenCV Installation](https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html)
 
 ## INSTALLATION
@@ -17,14 +18,14 @@ You can use this link to install OpenCV.
   cd build
    ```
 3. Execute cmake command
-   ```sh
+```sh
    cmake ..
    ```
 4. Compile the code with the following command
-   ```sh
+```sh
    make
    ```
 5. Execute the code
-   ```sh
+```sh
   ./mowito <i>path to the template image</i> <i>path to the test image</i>
    ```
