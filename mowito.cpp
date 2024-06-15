@@ -111,10 +111,10 @@ int main(int argc, char *argv[])
     cv::Point mean2;
 
     //calculate angle of object in both the image
-    // double test_angle = calculateAngle(test_img, mean1);
-    // double temp_angle = calculateAngle(temp_img, mean2);
-    double test_angle = watershedAnalysis(test_img, mean1);
-    double temp_angle = watershedAnalysis(temp_img, mean2);
+    double test_angle = calculateAngle(test_img, mean1);
+    double temp_angle = calculateAngle(temp_img, mean2);
+    // double test_angle = watershedAnalysis(test_img, mean1);
+    // double temp_angle = watershedAnalysis(temp_img, mean2);
 
     //calculate the rotational angle between the object in test image and object in template image
     double Angle = test_angle - temp_angle;
@@ -122,7 +122,7 @@ int main(int argc, char *argv[])
     if (Angle < 0) Angle += 360.0;
 
     //display the test image with the text containing the rotational angle 
-    // cv::putText(temp_img,std::to_string(Angle), cv::Point(mean2.x, mean2.y),cv::FONT_HERSHEY_SIMPLEX, 0.75, cv::Scalar(0, 0, 255), 2);
+    cv::putText(temp_img,std::to_string(Angle), cv::Point(mean2.x, mean2.y),cv::FONT_HERSHEY_SIMPLEX, 0.75, cv::Scalar(0, 0, 255), 2);
     cv::imshow("Template Image", temp_img);
     cv::waitKey(0);
 }
